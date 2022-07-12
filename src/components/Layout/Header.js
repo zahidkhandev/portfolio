@@ -39,7 +39,8 @@ const Wrapper = styled.header`
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
   width: auto;
-  height: 60px;
+  height: 40px;
+  padding: 20px 0;
   display: flex;
   align-items: stretch;
   width: 100%;

@@ -107,9 +107,8 @@ function Projects({ projectsVisible, theme }) {
 
 export default Projects;
 
-const Wrapper = styled.li`
+const Wrapper = styled.div`
   visibility: ${(props) => (props.visibility === true ? "visible" : "hidden")};
-  display: ${(props) => (props.visibility === true ? "block" : "none")};
   transition: 1s ease;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

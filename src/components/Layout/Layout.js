@@ -21,14 +21,14 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* display: grid; */
-  /* grid-template-rows: 1fr 10fr 1fr; */
 `;
 
 const Content = styled.div`
   width: ${defaultTheme.width};
   max-width: ${defaultTheme.maxWidth};
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 20px 0;
+  row-gap: 50px;
 `;

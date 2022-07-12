@@ -1,9 +1,4 @@
-import React, {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { defaultTheme } from "../../utils/ThemeConfig";
 import { ProgressBar } from "./ProgressBar";
@@ -120,7 +115,9 @@ function ProjectsCMD({ theme }) {
           displayLoading={displayLoading}
           setDisplayLoading={setDisplayLoading}
         />
-        <Projects projectsVisible={projectsVisible} theme={theme} />
+        <ProjectsDiv visibility={projectsVisible}>
+          <Projects projectsVisible={projectsVisible} theme={theme} />
+        </ProjectsDiv>
       </Content>
     </Wrapper>
   );
@@ -168,20 +165,16 @@ const Content = styled.div`
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px
       ${(props) => (props.theme == "light" ? "black" : "white")};
-
-    background-color: ${(props) =>
-      props.theme == "light" ? "black" : "#f5f5f5"};
+    background-color: "#f5f5f5";
   }
 
   ::-webkit-scrollbar {
     width: 12px;
-    background-color: ${(props) =>
-      props.theme == "light" ? "black" : "#f5f5f5"};
+    background-color: "#f5f5f5";
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${(props) =>
-      props.theme == "light" ? "white" : ` ${defaultTheme.main}`};
+    background-color: ${defaultTheme.main};
   }
 `;
 
@@ -201,4 +194,8 @@ const EnterInput = styled.span`
   margin: 10px 5px;
   animation: ${blink} 1s infinite steps(2);
   visibility: ${(props) => (props.visibility ? "visible" : "hidden")};
+`;
+
+const ProjectsDiv = styled.div`
+  display: ${(props) => (props.visibility === true ? "block" : "none")};
 `;
