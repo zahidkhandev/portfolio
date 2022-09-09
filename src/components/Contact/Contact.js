@@ -35,9 +35,9 @@ const Heading = styled.div`
   text-align: center;
   font-weight: 600;
   @media ${device.tablet} {
-    font-size: 40px;
+    font-size: 30px;
   }
   @media ${device.mobileL} {
-    font-size: 30px;
+    font-size: 20px;
   }
 `;
