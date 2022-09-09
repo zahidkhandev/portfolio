@@ -12,6 +12,7 @@ function Contact({ theme }) {
         url="https://calendly.com/kzahid"
         styles={{
           height: "646px",
+          maxHeight: "1000px",
           padding: "",
           margin: "0",
         }}
