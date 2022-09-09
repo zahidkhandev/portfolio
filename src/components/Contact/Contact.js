@@ -37,8 +37,10 @@ const Heading = styled.div`
   font-weight: 600;
   @media ${device.tablet} {
     font-size: 30px;
+    margin-bottom: 10px;
   }
   @media ${device.mobileL} {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 `;
